@@ -1,0 +1,31 @@
+.welcome, .adminPanel, .addUser, .addBalance, .customer, .placeOrder,
+	.placedOrders {
+	background: linear-gradient(#3A4550, #B9DCFF);
+	font-family: monospace;
+	font-size: large;
+	color: white;
+}
+
+.successMessage {
+	font-style: italic;
+	color: #CFF9CA;
+	font-size: medium;
+	font-stretch: wider;
+	font-weight: bold;
+}
+
+#validationError {
+	font-style: italic;
+	color: #C12800;
+	font-size: medium;
+	font-stretch: wider;
+	font-weight: bold;
+}
+
+#custHead, #empHead {
+	font-weight: bolder;
+}
+
+#adminDashboard {
+	font-size: large;
+}
