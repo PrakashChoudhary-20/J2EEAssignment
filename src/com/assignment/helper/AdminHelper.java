@@ -28,13 +28,12 @@ public class AdminHelper {
 		String postalAddress = request.getParameter("postalAddress");
 		String deliveryAddress = request.getParameter("deliveryAddress");
 		int roleType = Integer.parseInt(request.getParameter("roleType"));
-		Session session = factory.getCurrentSession();
-
-		// Database transaction begins here.
-		session.beginTransaction();
 
 		User user = new User(userName, email, phone, postalAddress, billingAddress, deliveryAddress, 0.00, roleType);
 		try {
+			Session session = factory.getCurrentSession();
+			// Database transaction begins here.
+			session.beginTransaction();
 			session.save(user);
 			model.addAttribute("message", "New user successfully added! Add another?");
 			session.getTransaction().commit();

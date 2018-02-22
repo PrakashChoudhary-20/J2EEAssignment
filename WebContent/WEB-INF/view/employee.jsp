@@ -12,15 +12,17 @@
 <head>
 <style>
 <%@ include file="../resources/css/menu.css"%>
+<%@ include file="../resources/css/page.css"%>
+<%@ include file="../resources/css/table.css"%>
 </style>
 </head>
-
-<h2>Welcome Dear Employee!</h2>
+<body class="employee">
+<br/>
+<h2 align="center">Welcome Dear Employee</h2>
 
 <ul>
 	<li><a href="employee">Show Pending Orders </a></li>
 	<li><a href="showAssignedOrders">Assigned Orders</a></li>
-	<li><a href="updateOrderStatus">Update Order Status</a></li>
 	<li><a href="signOut">Sign Out</a></li>
 </ul>
 
@@ -33,7 +35,7 @@
 
 ${assign_message }
 
-<table style="height: 67px; width: 100%;">
+<table style="height: 67px;" width="100%" border="1">
 	<tbody>
 		<tr>
 			<th style="width: 10%">Order ID</th>
@@ -47,17 +49,17 @@ ${assign_message }
 		<c:forEach items="${orders}" var="order">
 			<form action="assignOrder" method="GET">
 				<tr>
-					<td style="width: 10%"><input type="text" name="orderId"
+					<td style="width: 10%" align="center"><input type="text" name="orderId"
 						value="${order.id }" readonly="readonly" /></td>
-					<td style="width: 20%">${order.itemDescription }</td>
-					<td style="width: 10%">${order.actualCost }</td>
-					<td style="width: 20%">${order.shippingAddress }</td>
-					<td style="width: 20%">${order.pickupAddress }</td>
-					<td style="width: 10%"><button type="submit">Assign</button></td>
+					<td style="width: 20%" align="center">${order.itemDescription }</td>
+					<td style="width: 10%" align="center">${order.actualCost }</td>
+					<td style="width: 20%" align="center">${order.shippingAddress }</td>
+					<td style="width: 20%" align="center">${order.pickupAddress }</td>
+					<td style="width: 10%" align="center"><button type="submit">Assign</button></td>
 				</tr>
 			</form>
 		</c:forEach>
 	</tbody>
 </table>
-
+</body>
 </html>

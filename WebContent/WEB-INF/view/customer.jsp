@@ -40,5 +40,7 @@
 		</table>
 
 ${order}
+${orderCost }
+${orderError }
 </body>
 </html>

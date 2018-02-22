@@ -23,7 +23,7 @@ public class LoginController {
 			adminHelper.getUsers(model);
 			return "admin";
 		case "customer":
-			loginHelper.getUser(model);
+			loginHelper.getUser(request, model);
 			return "customer";
 		case "employee":
 			EmployeeController e = new EmployeeController();

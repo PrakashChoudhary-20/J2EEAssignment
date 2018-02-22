@@ -21,13 +21,14 @@
 	var modal = document.getElementById('myModal');
 
 	function openModal($button) {
+		alert($button);
 		document.getElementById('myModal').style.display = 'block';
 		document.getElementById('trackingStatus').innerHTML += $button;
 	}
 
 	function close() {
 		alert("Yeah!");
-		document.getElementById('myModal').remove();
+//		document.getElementById('myModal').remove();
 	}
 </script>
 </head>

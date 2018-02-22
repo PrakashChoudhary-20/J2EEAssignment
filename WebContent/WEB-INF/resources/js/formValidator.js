@@ -95,6 +95,17 @@ function validateAddBalanceForm(form) {
 	return isValid;
 }
 
+function validateStatus(form) {
+	var status = form["status"].value;
+	if (status == ""){
+		document.getElementById("validationError").innerHTML = "Status cannot be blank."
+		return false;
+		
+	}
+	else
+		return true;
+}
+
 function validateOrderForm(form) {
 	var elements = form.elements;
 	var pattern = /^\d+(\.\d+)?$/;
@@ -118,27 +129,25 @@ function validateOrderForm(form) {
 			break;
 		case "type":
 			var isSelected = false;
-			if(element.value == "normal" || element.value=="express")
-				{
-				 if(element.checked){
-					 break;
-				 }
-				 else{
-					 errorFields.push("delivery type ");
-				 }
+			if (element.value == "normal" || element.value == "express") {
+				if (element.checked) {
+					break;
+				} else {
+					errorFields.push("delivery type ");
 				}
+			}
 		}
 	}
 	if (errorFields.length == 1)
 		return true;
 	else {
-		if(errorFields.length != Array.from(new Set(errorFields)).length){
+		if (errorFields.length != Array.from(new Set(errorFields)).length) {
 			errorFields = Array.from(new Set(errorFields));
 		}
 	}
-		showError(errorFields);
-		return false;
-	}
+	showError(errorFields);
+	return false;
+}
 
 function showError(fields) {
 	document.getElementById("validationError").innerHTML = "Validation Errors at : "

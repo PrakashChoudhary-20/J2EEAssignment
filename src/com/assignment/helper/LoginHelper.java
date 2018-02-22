@@ -37,9 +37,11 @@ public class LoginHelper {
 		Query query = session.createQuery(hql);
 		this.users = query.getResultList();
 		if (users.isEmpty()) {
+			session.close();
 			return false;
 		} else {
 			System.out.println(users.get(0).getId());
+			session.close();
 			httpSession.setAttribute("user", users.get(0).getId());
 			return true;
 		}
@@ -69,10 +71,11 @@ public class LoginHelper {
 		return type;
 	}
 
-	public void getUser(Model model) {
+	public void getUser(HttpServletRequest request, Model model) {
+		httpSession = request.getSession(true);
 		int userId = (int) httpSession.getAttribute("user");
 		Session session = factory.getCurrentSession();
-		// session.beginTransaction();
+		session.beginTransaction();
 		User user = session.get(User.class, userId);
 		model.addAttribute("customer", user);
 		session.close();
