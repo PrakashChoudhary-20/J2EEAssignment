@@ -19,12 +19,12 @@
 			<tbody>
 				<tr>
 					<td style="width: 103px;">Email</td>
-					<td style="width: 244px;"><input type="text" name="email" /></td>
+					<td style="width: 244px;"><input type="text" name="email" id="email"/></td>
 				</tr>
 				<tr>
 					<td style="width: 103px;">Password</td>
 					<td style="width: 244px;"><input type="password"
-						name="password" /></td>
+						name="password" id="pwd"/></td>
 				</tr>
 
 				<tr>
@@ -35,7 +35,7 @@
 
 				<tr>
 					<td style="width: 103px;">&nbsp;</td>
-					<td style="width: 244px;"><input type="submit"></td>
+					<td style="width: 244px;"><input type="submit" id="submit"></td>
 				</tr>
 			</tbody>
 

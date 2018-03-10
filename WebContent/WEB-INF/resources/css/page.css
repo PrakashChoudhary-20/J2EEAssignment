@@ -1,6 +1,6 @@
 .welcome, .adminPanel, .addUser, .addBalance, .customer, .placeOrder,
 	.placedOrders, .employee, .assignedOrders {
-	background: linear-gradient(#ABB20E, #B9DCFF);
+	background: linear-gradient(#185C72, #F3FFC0);
 	font-family: monospace;
 	font-size: large;
 	color: white;

@@ -29,7 +29,7 @@
 		<li><a href="signOut">Sign Out</a></li>
 	</ul>
 
-	<br /> ${message}
+	<br /> <p id="userAddMessage">${message}</p>
 
 	<p>Add a new user in the system</p>
 	<form action="addUser" id="addUserForm" onsubmit="return validateAddUserForm(this)" method="POST">

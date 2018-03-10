@@ -41,7 +41,7 @@ public class OrderHelper {
 			session.beginTransaction();
 			session.save(order);
 			session.getTransaction().commit();
-			model.addAttribute("order", "Order placed successfully. Order ID:" + order.getId());
+			model.addAttribute("order", "Order placed successfully.");
 		} catch (Exception e) {
 			model.addAttribute("order",
 					"We have encountered an issue while placing your oder. Please try again later.");

@@ -20,10 +20,8 @@
 <script type="text/javascript">
 	var modal = document.getElementById('myModal');
 
-	function openModal($button) {
-		alert($button);
-		document.getElementById('myModal').style.display = 'block';
-		document.getElementById('trackingStatus').innerHTML += $button;
+	function showStatus($status, $id) {
+		document.getElementById('orderStatus').innerHTML = "Your order " +$id + ", current status is: " + $status;
 	}
 
 	function close() {
@@ -40,6 +38,7 @@
 	<li><a href="signOut">Sign Out</a></li>
 </ul>
 
+<p id = "orderStatus"></p>
 <table style="height: 67px; width: 100%;">
 	<tbody>
 		<tr>
@@ -57,20 +56,10 @@
 				<td style="width: 20%">${order.actualCost }</td>
 				<td style="width: 20%">${order.shippingAddress }</td>
 				<td style="width: 20%"><button id="track" name="trackButton"
-						name="Track" onClick="openModal('${order.orderStatus }')">Track</button></td>
+						name="Track" onClick="showStatus('${order.orderStatus }', '${order.id}')">Track</button></td>
 			</tr>
 		</c:forEach>
 	</tbody>
 </table>
-
-
-<!-- the Modal -->
-<div id="myModal" class="modal">
-	<!-- Modal content -->
-	<div class="modal-content">
-		<button id="close" onclick="close()">Close</button>
-		<p id="trackingStatus">Your order's current status is :</p>
-	</div>
-</div>
 </body>
 </html>

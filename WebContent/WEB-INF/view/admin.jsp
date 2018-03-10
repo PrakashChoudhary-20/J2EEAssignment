@@ -18,13 +18,13 @@
 </head>
 <body class="adminPanel">
 	<br />
-	<h2 align="center">Welcome to Admin panel</h2>
+	<h2 align="center" id="adminHome">Welcome to Admin panel</h2>
 	<p />
 	<ul>
-		<li><a href="adminHome">Home</a></li>
-		<li><a href="addUserForm">Add User</a></li>
-		<li><a href="addBalanceForm">Add Balance</a></li>
-		<li><a href="signOut">Sign Out</a></li>
+		<li><a href="adminHome" id="adminHomeLink">Home</a></li>
+		<li><a href="addUserForm" id="addUser">Add User</a></li>
+		<li><a href="addBalanceForm" id="addBalance">Add Balance</a></li>
+		<li><a href="signOut" id="signOut">Sign Out</a></li>
 	</ul>
 
 	<br />

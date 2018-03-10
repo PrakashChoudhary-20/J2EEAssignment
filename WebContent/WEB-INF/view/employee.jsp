@@ -55,7 +55,7 @@ ${assign_message }
 					<td style="width: 10%" align="center">${order.actualCost }</td>
 					<td style="width: 20%" align="center">${order.shippingAddress }</td>
 					<td style="width: 20%" align="center">${order.pickupAddress }</td>
-					<td style="width: 10%" align="center"><button type="submit">Assign</button></td>
+					<td style="width: 10%" align="center"><button type="submit" id=${order.id}>Assign</button></td>
 				</tr>
 			</form>
 		</c:forEach>

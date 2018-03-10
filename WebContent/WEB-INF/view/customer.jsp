@@ -14,7 +14,7 @@
 </head>
 <body class="customer">
 <br/>
-<h2 align="center">Welcome Dear Customer</h2>
+<h2 align="center" id="customerHome">Welcome Dear Customer</h2>
 <p></p>
 <ul>
 	<li><a href="orderForm">Place Order</a></li>
@@ -39,7 +39,7 @@
 			</tbody>
 		</table>
 
-${order}
+<p id="orderSuccess">${order}</p>
 ${orderCost }
 ${orderError }
 </body>
